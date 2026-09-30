@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+<!--   Navigation Section-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0"
+        >
+        <TableRow>
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:textSize="32dp"
+                />
+
+            <ImageButton
+                android:id="@+id/nav1Btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/nav_circular_base"
+                android:src="@drawable/nav_button_1"
+                android:scaleType="centerInside"
+                android:layout_margin="2dp"
+                />
+
+            <ImageButton
+                android:id="@+id/nav2Btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/nav_circular_base"
+                android:src="@drawable/nav_button_2"
+                android:scaleType="centerInside"
+                android:layout_margin="1dp"
+                />
+
+            <ImageButton
+                android:id="@+id/nav3Btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/nav_circular_base"
+                android:src="@drawable/nav_button_3"
+                android:scaleType="centerInside"
+                android:layout_margin="1dp"
+                />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+<!--    // Profile Section-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/profile1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenisha Sapkota"
+            android:textSize="26dp"
+            android:layout_toRightOf="@+id/profilePicture"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/profileStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feeling worried"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/profileName"
+            android:layout_toRightOf="@+id/profilePicture"
+            />
+
+    </RelativeLayout>
+
+<!--    // Post Section-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/postSectionLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/postProfilePicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/profile2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenish Malla"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/postProfilePicture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:src="@drawable/wallpaper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/postProfilePicture" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
