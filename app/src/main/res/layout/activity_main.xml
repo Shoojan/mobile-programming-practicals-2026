@@ -121,6 +121,7 @@
             android:layout_height="wrap_content"
             android:text="Jenish Malla"
             android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/post_image"
             app:layout_constraintStart_toEndOf="@+id/postProfilePicture"
             app:layout_constraintTop_toTopOf="parent" />
 
