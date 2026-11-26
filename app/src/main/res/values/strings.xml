@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BCA 6th App</string>
+
+    <string-array name="emotions">
+        <item>Happy</item>
+        <item>Sad</item>
+        <item>Anxious</item>
+        <item>Angry</item>
+        <item>Worried</item>
+    </string-array>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.mobileprogrammingpracticals2026;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Navigate to Him Activity
+        ImageButton nav3Btn = findViewById(R.id.nav3Btn);
+
     }
 }

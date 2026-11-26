@@ -20,5 +20,11 @@ public class HerActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Retrieve the gift from Him
+
+        // Determine the response based on the gift
+
+        // Reply to Him
     }
 }
