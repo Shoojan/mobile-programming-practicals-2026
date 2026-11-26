@@ -29,8 +29,8 @@
         android:layout_above="@id/replyBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="60dp"
-<!--        android:entries="@array/emotions" -->
-        />
+        android:entries="@array/emotions"
+        />Ï
 
     <Button
         android:id="@+id/replyBtn"
