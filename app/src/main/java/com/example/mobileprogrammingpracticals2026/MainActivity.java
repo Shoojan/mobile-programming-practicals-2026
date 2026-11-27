@@ -1,6 +1,8 @@
 package com.example.mobileprogrammingpracticals2026;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Navigate to Him Activity
         ImageButton nav3Btn = findViewById(R.id.nav3Btn);
+
+        nav3Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navigationIntent = new Intent(MainActivity.this, HimActivity.class);
+                startActivity(navigationIntent);
+            }
+        });
 
     }
 }

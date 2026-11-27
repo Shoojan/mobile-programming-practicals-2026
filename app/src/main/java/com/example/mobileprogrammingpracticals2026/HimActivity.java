@@ -1,6 +1,9 @@
 package com.example.mobileprogrammingpracticals2026;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
@@ -12,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class HimActivity extends AppCompatActivity {
 
-    private final String[] gifts = { "Flowers", "Chocolate" };
+    private final String[] gifts = { "Flowers", "Chocolate", "Ghar", "Nadini" };
 
     private String selectedGift;
 
@@ -31,9 +34,26 @@ public class HimActivity extends AppCompatActivity {
         Button giftSendBtn = findViewById(R.id.giftSendBtn);
 
         // Set up entries in Spinner
-
+        ArrayAdapter<String> giftListAdapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                this.gifts
+        );
+        giftListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        himGiftSpinner.setAdapter(giftListAdapter);
 
         // Listener for Spinner selection
+        himGiftSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedGift = gifts[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 }
